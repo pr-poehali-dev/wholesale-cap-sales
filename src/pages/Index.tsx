@@ -405,7 +405,7 @@ const Index = () => {
                   Частые вопросы
                 </h2>
               </div>
-              <Accordion type="single" collapsible className="space-y-4">
+              <div className="space-y-4">
                 {[
                   {
                     q: 'Какой минимальный заказ?',
@@ -432,16 +432,18 @@ const Index = () => {
                     a: 'Для юридических лиц — безналичный расчет по договору с отсрочкой до 14 дней. Для физических лиц — предоплата 50%, остаток при получении.',
                   },
                 ].map((faq, idx) => (
-                  <AccordionItem key={idx} value={`item-${idx}`} className="border rounded-lg px-6">
-                    <AccordionTrigger className="text-left font-heading font-semibold hover:text-primary">
-                      {faq.q}
-                    </AccordionTrigger>
-                    <AccordionContent className="text-muted-foreground">
-                      {faq.a}
-                    </AccordionContent>
-                  </AccordionItem>
+                  <Accordion key={idx} type="single" collapsible>
+                    <AccordionItem value="item-1" className="border rounded-lg px-6">
+                      <AccordionTrigger className="text-left font-heading font-semibold hover:text-primary">
+                        {faq.q}
+                      </AccordionTrigger>
+                      <AccordionContent className="text-muted-foreground">
+                        {faq.a}
+                      </AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
                 ))}
-              </Accordion>
+              </div>
             </div>
           </div>
         </section>
