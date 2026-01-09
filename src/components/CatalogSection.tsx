@@ -63,7 +63,7 @@ const CatalogSection = ({ scrollToSection }: CatalogSectionProps) => {
                   <img
                     src="https://cdn.poehali.dev/projects/09b372ec-6be3-4dd6-858a-35e01b6f15ee/files/54bc84da-4e5f-4bcf-8f4d-1119c3eeb61e.jpg"
                     alt={cap.name}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full group-hover:scale-110 transition-transform duration-500 mx-0 my-0 py-[1px] object-contain"
                   />
                 </div>
                 <h3 className="font-heading font-semibold text-xl text-secondary mb-2">
